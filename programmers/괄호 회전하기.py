@@ -24,7 +24,3 @@ def solution(s):
             answer += 1
         check = True
     return answer
-
-p = ["}]()[{","[](){}"]
-for i in p:
-    print(solution(i))

@@ -14,5 +14,11 @@ for i in range(N):
     if stack[-1] == num:
         stack.pop()
         answer.append("-")
+    else:
+        answer = []
+        break
 
-print(*answer, sep="\n")
+if answer:
+    print(*answer, sep="\n")
+else:
+    print("NO")

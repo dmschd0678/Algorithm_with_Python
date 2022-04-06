@@ -9,4 +9,7 @@ while n > 0:
     else:
         n -= 3
         cnt += 1
-print(cnt)
+if n == 0:
+    print(cnt)
+else:
+    print(-1)

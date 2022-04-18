@@ -1,10 +1,17 @@
 import sys
 
-s = sys.stdin
+st = []
 
-x = ["-","(",")",",","."]
-s = list(s)
-for i in x:
-    s.replace(i,"")
+while True:
+    st.extend(sys.stdin.readline().split())
+    if st[-1] == "E-N-D":
+        break
 
-print(s)
+word = []
+for i in st:
+    temp = ""
+    for j in i:
+        if j.isalpha() or j == "-":
+            temp += j.lower()
+    word.append(temp)
+print(sorted(word,reverse=True, key = lambda x : len(x))[0].lower())
